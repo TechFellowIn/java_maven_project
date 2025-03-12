@@ -1,0 +1,46 @@
+apiVersion: v1
+data:
+  ALLOWED_HOSTS: '[''localhost'', ''127.0.0.1'', ''[::1]'', ''auth.localhost'', ''fusionauth'']'
+  APP_ENV: dev
+  APP_HOST: 0.0.0.0
+  APP_NAME: Cognify
+  APP_PORT: "8000"
+  APP_SECRET_KEY: your_app_secret_key
+  CLIENT_ID: your_client_id
+  CLIENT_SECRET: your_client_secret
+  CORS_ALLOWED_ORIGINS: '[''http://localhost'', ''https://localhost'']'
+  CSRF_TRUSTED_ORIGINS: '[''https://localhost'']'
+  DEBUG: "True"
+  DEPLOY: "False"
+  EXTERNAL_IP: 127.0.0.1
+  FUSIONAUTH_ADMIN_KEY: your_fusionauth_admin_key
+  FUSIONAUTH_API_KEY: your_fusionauth_api_key
+  FUSIONAUTH_APP_ID: your_fusionauth_app_id
+  FUSIONAUTH_APP_KICKSTART_FILE: ../kickstart/kickstart.json
+  FUSIONAUTH_APP_MEMORY: 512M
+  FUSIONAUTH_APP_RUNTIME_MODE: development
+  FUSIONAUTH_DATABASE_PASSWORD: your_fusion_password
+  FUSIONAUTH_DATABASE_ROOT_PASSWORD: your_fusion_root_password
+  FUSIONAUTH_DATABASE_ROOT_USERNAME: fusion_root_user
+  FUSIONAUTH_DATABASE_USERNAME: fusion_user
+  FUSIONAUTH_INTERNAL_URL: http://fusionauth:9011
+  FUSIONAUTH_TENANT_KEY: your_fusionauth_tenant_key
+  FUSIONAUTH_USER_KEY: your_fusionauth_user_key
+  ISSUER: http://fusionauth:9011/
+  MINIO_ACCESS_KEY: your_minio_access_key
+  MINIO_ENDPOINT: minio:9000
+  MINIO_SECRET_KEY: your_minio_secret_key
+  OPENSEARCH_JAVA_OPTS: -Xms512m -Xmx512m
+  POSTGRES_DB: postgres
+  POSTGRES_HOST: db
+  POSTGRES_PASSWORD: your_postgres_password
+  POSTGRES_PORT: "5432"
+  POSTGRES_USER: your_postgres_user
+  SECRET_KEY: your_secret_key_here
+  SECURE_PROXY_SSL_HEADER: ('HTTP_X_FORWARDED_PROTO', 'https')
+  TENANT_ID: your_tenant_id
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: backend-env
+  name: env
